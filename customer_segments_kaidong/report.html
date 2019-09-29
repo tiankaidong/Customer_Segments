@@ -13561,7 +13561,7 @@ Data points considered outliers for the feature &#39;Delicatessen&#39;:
 </div>
 <div class="inner_cell">
 <div class="text_cell_render border-box-sizing rendered_html">
-<p><strong>回答:</strong> 1,是（65 66 75 128 154） 2，是 3，会导致计算结果向异常倾斜</p>
+<p><strong>回答:</strong> 1,是（65 66 75 128 154） 2，是 3，删除包含超过1个类别的异常值，因为单个类别异常的数据较多、对数据倾斜影响有限、符合统计学规律，因此仅删除2个类别异常以上的数据。</p>
 
 </div>
 </div>
@@ -13676,7 +13676,8 @@ Data points considered outliers for the feature &#39;Delicatessen&#39;:
 <li>第一个主成分体现了牛奶、食品杂货、清洁纸的强相关性，与之前的散布矩阵、相关系数矩阵、热力图的主要结果一致。</li>
 <li>第二个主成分体现了新鲜食物、冷冻食品、熟食的高相关性，一般餐厅会体现这一类的消费特点。</li>
 <li>第三个主成分体现了冷冻食品、熟食的相关性以及它们和新鲜食物的相斥性。</li>
-<li>第四个主成分体现了冷冻食品和熟食的相斥性。</li>
+<li>第四个主成分体现了新鲜实物和熟食的相斥性。
+可以看出，第二、三、四个主成分都在协调新鲜食物、冷冻食物、熟食之间的比例关系，因此第1个主成分可以理解为一类（如零售店），第2~4个主成分理解为第二大类（餐饮相关，如咖啡店）</li>
 </ol>
 
 </div>
